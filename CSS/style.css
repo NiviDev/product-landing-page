@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,400&family=Merriweather:ital,wght@1,700&display=swap');
+
+html {
+    font-size: 10px;
+}
+body {
+    font-family: 'Fira Sans','Segoe UI', 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+    background-color: rgb(190, 236, 188);
+}
+
+h1 {
+    font-family: 'Merriweather';
+    font-size: 3.5rem;
+    text-align: end;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: grid;
+    background-color: #9dd89b;
+    grid-template-rows: 80px;
+    grid-template-columns: auto;
+    grid-template-areas: "marca . nav";
+    z-index: 100;
+}
+
+
+#logo-container {
+    display: grid;
+    grid-template-areas: "imagen letras"; 
+    justify-content: start;  
+    align-items: flex-start;
+    justify-self: start;
+    align-self: center;
+}
+
+#header-img {
+    align-self: center;
+    margin-left: 10px;
+} 
+
+#nav-bar {
+    margin-bottom: 20px;
+    justify-self: end;
+    align-self: end;
+    margin-left: 500px;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+main {
+    margin: 90px 90px 20px 90px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: large;
+    color: #496548;
+    padding: 5px 20px 5px 20px;
+}
+
+.nav-link:hover {
+    color: whitesmoke;
+    background-color: #7cab7b;
+    border-radius: 5px;
+}
+
+#contenedor {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.ventas {
+    width: 300px;
+    height: 340px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(191, 218, 185);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.ventas:hover {
+    transform: scale(1.08);
+}
+
+.ventas > img {
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    background-color: #92b590;
+    font-size: 1.05rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#info {
+    margin-left: 10px;
+    text-align: start;
+}
+
+#redes {
+    text-align: start;
+    display: grid;
+    grid-template-columns: 170px 170px;
+    grid-template-rows: 25px 25px;
+    grid-template-areas: 
+        "mail git"
+        "in .";
+}
+
+#miMail {
+    grid-area: mail;
+    align-self: center;
+}
+
+#miLn {
+    grid-area: in;
+    align-self: center;
+}
+
+#miGit {
+    grid-area: git;
+    align-self: center;
+}
+
+@media (max-width: 1025px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 40px;
+    }
+
+    #nav-bar {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    #header {
+        height: 100px;
+        grid-template-rows: auto;
+        grid-template-areas: "marca""nav";
+    }
+    
+    #logo-container {
+        justify-self: center;
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    #header-img {
+        height: 40px;
+        width: auto;
+        align-self: start;
+        margin-top: 5px;
+    }
+
+    #nav-bar {
+        justify-self: center;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .ventas {
+        width: 200px;
+        height: auto;
+    }
+
+    .ventas > img {
+        width: 110px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .ventas:hover {
+        transform: scale(1.05);
+    }
+
+    main {
+        margin: 110px 90px 20px 90px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    #info {
+        text-align: center;
+    }
+
+    #redes {
+        text-align: center;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "mail"
+            "git"
+            "in";
+    }
+}
+
+@media (max-width: 400px) {
+    #header {
+        height: 100px;
+        grid-template-rows: auto;
+        grid-template-areas: "marca""nav";
+    }
+    
+    #logo-container {
+        justify-self: center;
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    #header-img {
+        height: 40px;
+        width: auto;
+        align-self: start;
+        margin-top: 5px;
+    }
+
+    #nav-bar {
+        justify-self: center;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .ventas {
+        width: 200px;
+        height: auto;
+    }
+
+    .ventas > img {
+        width: 110px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .ventas:hover {
+        transform: scale(1.05);
+    }
+
+    main {
+        margin: 110px 90px 20px 90px;
+    }
+}
+
